@@ -1,8 +1,7 @@
 class SecretSanta
-  PARTY = %w(Aaron Ryan Mom Dad Greg Justin Betty Lance)
+  PARTY = %w(Larry Curley Moe Shemp Howard Joe)
 
   def self.run
-    raise "You brought an odd number of people to the party, so CHRISTMAS is CANCELLED.  Thanks alot!" if PARTY.size%2!=0
     the_hat = PARTY.shuffle
     everyone_pick_a_name(PARTY,the_hat)
   end
