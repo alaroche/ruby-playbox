@@ -9,13 +9,11 @@ class SecretSanta
 private
 
   def self.everyone_pick_a_name(the_party,the_hat)
-    arrangement = []
-    the_party.each do |santa|
+    the_party.map do |santa|
       receiver = get_name(the_hat)
       receiver == santa ? redo : the_hat.delete(receiver)
-      arrangement << set_arrangement(santa,receiver)
+      set_arrangement(santa,receiver)
     end
-    return arrangement
   end
 
   def self.get_name(the_hat)
@@ -28,3 +26,5 @@ private
   end
 
 end
+
+SecretSanta.run
