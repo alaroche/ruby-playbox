@@ -10,13 +10,16 @@ private
 
   def self.everyone_pick_a_name(the_party,the_hat)
     the_party.map do |santa|
-      receiver = get_name(the_hat)
-      receiver == santa ? redo : the_hat.delete(receiver)
-      set_arrangement(santa,receiver)
+      pair_them_up(santa)
     end
   end
 
-  def self.get_name(the_hat)
+  def pair_them_up(santa)
+    get_receiver(the_hat) == santa ? redo : the_hat.delete(receiver)
+    set_arrangement(santa,receiver)
+  end
+
+  def self.get_receiver(the_hat)
     the_hat[0 + rand(the_hat.size)]
   end
 
