@@ -1,4 +1,4 @@
-require 'spec_helper'
+require './secretsanta.rb'
 
 describe SecretSanta do
   before :each do
