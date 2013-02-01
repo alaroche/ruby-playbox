@@ -1,7 +1,7 @@
 require './secretsanta.rb'
 
 describe SecretSanta do
-  before :each do
+  before do
     party = %w(John Joe Jack Jan Jill Jim)
     hat = party.shuffle
   end
