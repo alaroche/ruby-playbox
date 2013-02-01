@@ -1,4 +1,4 @@
-require './spec/spec_helper'
+require './fizzbuzz.rb'
 
 describe FizzBuzz do
   context "#determine_response" do
